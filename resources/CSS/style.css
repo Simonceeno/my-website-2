@@ -17,27 +17,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     box-sizing: border-box;
 }
 
-/* general */
-.body-container{
+body{
     background-color: var(--azure);
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--azure);
-    color: var(--primary);
-    padding: 0 15rem;
-    gap: 7rem;
-}
-
-.boxes{
-    display: inline-block;
-    width: 100%;
-    border: solid 3px var(--primary);
-    background-color: var(--white);
-    box-shadow: var(--primary) .18rem 0.18rem 0rem 0rem;
-    padding: 3.5rem 4rem;
 }
 
 /* menu */
@@ -48,6 +29,21 @@ header{
     width: 100%;
     background-color: var(--azure);
     border-bottom: solid 5px var(--primary);
+    /* Sticky header
+    position: fixed;
+    top: 0;
+    z-index: 99; 
+    */
+}
+/* general */
+.main-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 5.31rem 7.44rem 5.31rem 7.44rem;
+
 }
 
 nav{
@@ -66,32 +62,107 @@ header ul{
 }
 
 /* content */
+
+
 .cta-box{
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    justify-items: center;
-    margin-top: 5rem;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+gap: 14px;
+padding: 4rem 3rem 4rem 3rem;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 5rem 0rem;
+
+box-sizing: border-box;
+border: 0.19rem solid var(--primary);
+box-shadow: 0.25rem 0.25rem 0rem 0rem var(--primary);
+background: var(--white);
 }
 
-.services-box {
-    width: 50vw;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 2rem;
+.services-box{
+display: flex;
+width: 50vw;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+gap: 14;
+padding: 1rem 3rem 1rem 3rem;
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 5rem 0rem;
+
+box-sizing: border-box;
+border: 0.19rem solid rgb(0, 71, 138);
+box-shadow: 0.25rem 0.25rem 0rem 0rem rgb(0, 71, 138);
+background: rgb(255, 255, 255);
 }
 
-.about-box {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: row;
+.about-box{
+display: flex;
+width: 50vw;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 14;
+padding: 1rem 3rem 1rem 3rem;
+flex: none;
+order: 2;
+flex-grow: 0;
+margin: 5rem 0rem;
+
+box-sizing: border-box;
+border: 0.19rem solid rgb(0, 71, 138);
+box-shadow: 0.25rem 0.25rem 0rem 0rem rgb(0, 71, 138);
+background: rgb(255, 255, 255);
+}
+
+.about-box-internal{
+display: flex;
+width: 80%;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 14;
+padding: 0rem;
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0rem 14rem;
 }
 
 .about-box-image{
-    width: 30%;
-    max-width: 100%;
+position: static;
+width: 18.75rem;
+height: 23.21rem;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0rem 14rem;
+}
+
+
+/* button */
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    padding-bottom: 5rem;
+}
+
+button{
+    width: 16rem;
+    height: 4rem;
+    font-family: "Dela Gothic One", Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    background-color: var(--secondary);
+    color: var(--white);
+    border-radius: 2.5rem;
+    border: solid 3px var(--primary);
 }
 
 /* footer */
@@ -108,20 +179,7 @@ footer ul{
     flex-direction: row;
     text-align: center;
     gap: 2.25rem;
-    list-style: none
-    ;
-}
-
-/* button */
-button{
-    width: 16rem;
-    height: 4rem;
-    font-family: "Dela Gothic One", Arial, Helvetica, sans-serif;
-    font-size: 1.8rem;
-    background-color: var(--secondary);
-    color: var(--white);
-    border-radius: 2.5rem;
-    border: solid 3px var(--primary);
+    list-style: none;
 }
 
 /* typography */
@@ -148,6 +206,7 @@ h1 {
     font-size: 3rem;
     letter-spacing: -0.025rem;
     margin: 0 0 .5rem 0;
+    color: var(--primary);
 }
 
 
@@ -178,4 +237,5 @@ p, .services-box__list-element{
     font-size: 1.375rem;
     line-height: 1.375;
     font-weight: 400;
+    color: var(--primary);
 }
